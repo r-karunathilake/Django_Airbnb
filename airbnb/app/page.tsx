@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Categories from "./components/categories";
 import PropertyListing from "./components/properties/property_collection";
 

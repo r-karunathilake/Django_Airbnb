@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar/>
-        <div className="py-36 bg-white">
+        <div className="pt-36 pb-16 bg-white">
           {children}
         </div>
       </body>

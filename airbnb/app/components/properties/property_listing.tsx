@@ -9,7 +9,7 @@ const PropertyListItem = () =>{
                     src="/properties/national_parks.jpeg"
                     sizes="(max-width: 768px) 768px, (max-width: 1200px): 768px, 768px"
                     className="hover:scale-110 object-cover transition h-full w-full"
-                    alt="Park Cabin"
+                    alt="National Park Cabin"
                 />
             </div>
             <div className="mt-2">

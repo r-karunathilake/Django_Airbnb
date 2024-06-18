@@ -4,7 +4,7 @@ import ReservationSideBar from "@/app/components/properties/reservation_sidebar"
 const PropertyDetailPage = () => {
     return (
         <main className="max-w-[1500px] mx-auto px-6 text-black pb-6">
-            <div className="relative mb-4 w-3/4 h-[64vh] mx-auto overflow-hidden rounded-xl">
+            <div className="relative mb-4 w-2/3 h-[64vh] mx-auto overflow-hidden rounded-xl">
                 <Image
                     fill
                     src="/properties/national_parks.jpeg"

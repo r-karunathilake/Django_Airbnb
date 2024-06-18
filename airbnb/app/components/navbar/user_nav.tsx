@@ -1,9 +1,16 @@
-import Image from "next/image"
+"use client";
+
+import Image from "next/image";
+import {useState } from "react";
+import MenuLink from "./menu_link";
 
 const UserNav = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <div className="p-2 relative inline-block border rounded-full">
-            <button className="flex items-center">
+            <button onClick={() => setIsOpen(!isOpen)}
+                    className="flex items-center">
                 <Image 
                     src="/menu.svg"
                     alt="Menu Button"
@@ -17,6 +24,20 @@ const UserNav = () => {
                     height={20}
                 />
             </button>
+            {isOpen && (
+                <div className="w-[220px] absolute top-[65px] right-0 
+                              bg-white border rounded-xl shadow-md
+                                flex flex-col cursor-pointer">
+                    <MenuLink 
+                        label="Log In"
+                        onClick={() => console.log("Clicked Button!")}
+                    />
+                    <MenuLink 
+                        label="Sign Up"
+                        onClick={() => console.log("Clicked Button!")}
+                    />
+                </div>
+            )}
         </div>
     )
 }

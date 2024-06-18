@@ -1,5 +1,5 @@
 import Categories from "./components/categories";
-import PropertyListing from "./components/properties/property_collection";
+import PropertyListing from "./components/properties/property_listing";
 
 export default function Home() {
   return (

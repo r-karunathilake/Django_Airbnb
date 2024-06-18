@@ -5,7 +5,7 @@ const ReservationSideBar = () =>{
 
             <div className="mb-6 p-3 border border-gray-400 rounded-xl">
                 <label className="mb-2 block font-bold text-xs">Guests</label>
-                <select className="w-full text-sm bg-white">
+                <select className="w-full text-sm bg-slate-50">
                     <option value="">1</option>
                     <option value="">2</option>
                     <option value="">3</option>

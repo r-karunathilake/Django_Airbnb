@@ -3,9 +3,12 @@
 import Image from "next/image";
 import {useState } from "react";
 import MenuLink from "./menu_link";
+import useLoginModal from "@/app/hooks/use_login_modal";
+import { loadGetInitialProps } from "next/dist/shared/lib/utils";
 
 const UserNav = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const loginModal = useLoginModal(); 
 
     return (
         <div className="p-2 relative inline-block border rounded-full">
@@ -30,7 +33,13 @@ const UserNav = () => {
                                 flex flex-col cursor-pointer">
                     <MenuLink 
                         label="Log In"
-                        onClick={() => console.log("Clicked Button!")}
+                        onClick={() => 
+                            {
+                                console.log("Clicked Button!");
+                                loginModal.open();
+                                setIsOpen(false); // Close the login window
+                            }
+                        }
                     />
                     <MenuLink 
                         label="Sign Up"

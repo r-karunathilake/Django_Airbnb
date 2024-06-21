@@ -1,17 +1,20 @@
 "use client";
 
 import Modal from "./modal";
-import useLoginModal from "@/app/hooks/use_login_modal";
+import useSignUpModal from "@/app/hooks/use_sign_up_modal";
 import CustomBtn from "../forms/custom_btn";
 
-const LoginModal = () => {
-    const loginModal = useLoginModal(); 
+const SignUpModal = () => {
+    const signUpModal = useSignUpModal(); 
     const content = (
     <>
         <form className="space-y-4">
             <input placeholder="Your email address" type="email" 
                    className="pl-4 h-[54px] w-full border border-gray-300 rounded-xl"/>
             <input placeholder="Your password" type="password" 
+                   className="pl-4 h-[54px] w-full border border-gray-300 rounded-xl"/>
+            
+            <input placeholder="Repeat password" type="password" 
                    className="pl-4 h-[54px] w-full border border-gray-300 rounded-xl"/>
             
             {/* Show errors */}
@@ -29,12 +32,12 @@ const LoginModal = () => {
 
     return (
         <Modal 
-            isOpen={loginModal.isOpen}
-            close={loginModal.close}
-            label="Log in"
+            isOpen={signUpModal.isOpen}
+            close={signUpModal.close}
+            label="Sign up"
             content={content}
         />
     )
 }
 
-export default LoginModal;
+export default SignUpModal;

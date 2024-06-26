@@ -1,13 +1,13 @@
-#!/bin/sh 
+#!/bin/sh
 
-if ["$DATABASE" = "postgres"]; then
+if [ "$DATABASE" = "postgres" ]; then
     echo "Checking if database is running..." 
 
-    while !nc -z $SQL_HOST $SQL_PORT; do
+    while ! nc -z $SQL_HOST $SQL_PORT; do
         sleep 0.1
     done 
 
-    echo "The database is up and running: :)" 
+    echo "The database is up and running :)" 
 fi 
 
 python manage.py migrate 

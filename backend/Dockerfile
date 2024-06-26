@@ -1,5 +1,7 @@
+# Python runtime as a parent image
 FROM python:3.12.2-slim-bullseye
-WORKDIR /usr/src/
+
+WORKDIR /usr/src/backend/
 
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -17,5 +19,5 @@ RUN chmod +x ./entrypoint.sh
 
 COPY . .
 
-ENTRYPOINT [ "/usr/src/entrypoint.sh" ]
+ENTRYPOINT [ "/usr/src/backend/entrypoint.sh" ]
 

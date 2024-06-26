@@ -3,9 +3,9 @@ services:
     build: ./backend
     command: python manage.py runserver 0.0.0.0:8000
     volumes: 
-      - ./backend/djangobnb/:/usr/src/djangobnb/
+      - ./backend:/usr/src/backend/
     ports:
-      - 8001:8000
+      - 8000:8000
     env_file:
       - ./backend/.docker_env.dev
     depends_on:
